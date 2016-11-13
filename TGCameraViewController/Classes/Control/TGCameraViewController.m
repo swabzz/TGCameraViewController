@@ -256,7 +256,7 @@
     }];
     
     dispatch_group_enter(group);
-    [_camera takePhotoWithCaptureView:_captureView videoOrientation:videoOrientation cropSize:_captureView.frame.size completion:^(UIImage *_photo) {
+    [_camera takePhotoWithCaptureView:_captureView videoOrientation:videoOrientation cropSize:CGSizeMake(100, 100) completion:^(UIImage *_photo) {
         photo = _photo;
         dispatch_group_leave(group);
     }];
